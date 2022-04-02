@@ -37,6 +37,11 @@ dependencies:
   bloc: ^8.0.3
   flutter_bloc: ^8.0.1
   flutter_hooks: ^0.18.2+1
+  firebase_core: ^1.13.1
+  firebase_auth: ^3.3.11
+  firebase_storage: ^10.2.9
+  image_picker: ^0.8.4+11
+  uuid: ^3.0.6
 
 dev_dependencies:
   flutter_test:
