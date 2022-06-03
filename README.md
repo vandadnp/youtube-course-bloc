@@ -1,16 +1,9 @@
-# testingbloc_course
+# Bloc state management
 
-A new Flutter project.
+Repo for my Bloc state management course (https://youtu.be/Mn254cnduOY)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Each step of the course is in its own tag and commit so either check the various commits out or go to various tags.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I have deleted the Firebase project backing this app for security reasons so before you get started, set up your firebase backend as shown in the course (https://youtu.be/Mn254cnduOY)
