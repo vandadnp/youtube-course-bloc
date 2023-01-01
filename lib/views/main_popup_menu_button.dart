@@ -12,23 +12,25 @@ class MainPopupMenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appBloc = context.read<AppBloc>();
+
     return PopupMenuButton<MenuAction>(
       onSelected: (value) async {
         switch (value) {
           case MenuAction.logout:
             final shouldLogOut = await showLogOutDialog(context);
             if (shouldLogOut) {
-              context.read<AppBloc>().add(
-                    const AppEventLogOut(),
-                  );
+              appBloc.add(
+                const AppEventLogOut(),
+              );
             }
             break;
           case MenuAction.deleteAccount:
             final shouldDeleteAccount = await showDeleteAccountDialog(context);
             if (shouldDeleteAccount) {
-              context.read<AppBloc>().add(
-                    const AppEventDeleteAccount(),
-                  );
+              appBloc.add(
+                const AppEventDeleteAccount(),
+              );
             }
             break;
         }

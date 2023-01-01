@@ -15,6 +15,8 @@ class PhotoGalleryView extends HookWidget {
   Widget build(BuildContext context) {
     final picker = useMemoized(() => ImagePicker(), [key]);
     final images = context.watch<AppBloc>().state.images ?? [];
+    final appBloc = context.read<AppBloc>();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Photo Gallery'),
@@ -27,11 +29,11 @@ class PhotoGalleryView extends HookWidget {
               if (image == null) {
                 return;
               }
-              context.read<AppBloc>().add(
-                    AppEventUploadImage(
-                      filePathToUpload: image.path,
-                    ),
-                  );
+              appBloc.add(
+                AppEventUploadImage(
+                  filePathToUpload: image.path,
+                ),
+              );
             },
             icon: const Icon(
               Icons.upload,
